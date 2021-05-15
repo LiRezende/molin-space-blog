@@ -1,0 +1,22 @@
+<html lang="port">
+    <%- include('../partials/head.ejs') %>
+</html>
+<body>
+    <%- include('../partials/nav.ejs') %>
+    <div class="blogs content">
+        <h2>Create an Article</h2>
+    </div>
+    <div class="create-blog content">
+        <form action="/articles" method="POST">
+          <label for="title">Article Title:</label>
+          <input type="text" id="title" name="title" required>
+          <label for="snippet">Article Snippet:</label>
+          <input type="text" id="snippet" name="snippet" required>
+          <label for="body">Article Body:</label>
+          <textarea id="body" name="body" required></textarea>
+          <button>Submit</button>
+        </form>
+      </div>
+    <%- include('../partials/footer.ejs') %>
+</body>
+</html>

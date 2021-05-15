@@ -1,0 +1,21 @@
+<html lang="port">
+    <%- include('../partials/head.ejs') %>
+</html>
+<body>
+    <%- include('../partials/nav.ejs') %>
+    <div class="blogs content">
+        <h2>Articles</h2>
+        <% if (articles.length > 0) { %>
+            <% articles.forEach(article => { %>
+              <a class="single" href="/articles/<%= article._id %>">
+                <h3 class="title"><%= article.title %></h3>
+                <p class="snippet"><%= article.snippet %></p>
+              </a>
+            <% }) %>
+          <% } else { %>
+            <p>There are no posts to display...</p>
+          <% } %>
+    </div>
+    <%- include('../partials/footer.ejs') %>
+</body>
+</html>
